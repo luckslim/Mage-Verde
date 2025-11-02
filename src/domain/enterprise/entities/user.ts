@@ -26,6 +26,6 @@ export class User extends Entity<userProps> {
   }
   static create(props: userProps, id?: UniqueEntityID) {
     const user = new User(props, id);
-    return user;
+    return user;  
   }
 }
