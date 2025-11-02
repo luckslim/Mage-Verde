@@ -3,6 +3,7 @@ import { Admin } from "@/domain/enterprise/entities/admin";
 import type { AdminRepository } from "../../repositories/admin-repository";
 import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 import type { FakeHasher } from "../../../../../test/cryptography/fake-hasher";
+import type { HashGenerator } from "../../cryptography/hash-generator";
 
 interface CreateAdminUseCaseRequest {
   name: string;
@@ -14,7 +15,7 @@ type CreateAdminUseCaseResponse = Either<
   { admin: Admin }
 >;
 export class CreateAdminUseCase {
-  constructor(public adminRepository: AdminRepository,public hash: FakeHasher) {}
+  constructor(public adminRepository: AdminRepository,public hashGenerator: HashGenerator) {}
   async execute({
     name,
     email,
@@ -24,7 +25,7 @@ export class CreateAdminUseCase {
     if (adminAlreadyExist) {
       return left(new userAlreadyExistError());
     } else {
-      const hashedPassword = await this.hash.hash(password);
+      const hashedPassword = await this.hashGenerator.hash(password);
 
       const admin = Admin.create({
         name,

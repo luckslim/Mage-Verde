@@ -3,6 +3,7 @@ import { User } from "@/domain/enterprise/entities/user";
 import type { UserRepository } from "../../repositories/user-repository";
 import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 import type { FakeHasher } from "../../../../../test/cryptography/fake-hasher";
+import type { HashGenerator } from "../../cryptography/hash-generator";
 
 interface CreateUserUseCaseRequest {
   name: string;
@@ -11,7 +12,7 @@ interface CreateUserUseCaseRequest {
 }
 type CreateUserUseCaseResponse = Either<userAlreadyExistError, { user: User }>;
 export class CreateUserUseCase {
-  constructor(public userRepository: UserRepository, public hash: FakeHasher) {}
+  constructor(public userRepository: UserRepository, public hashGenerator : HashGenerator) {}
   async execute({
     name,
     email,
@@ -21,7 +22,7 @@ export class CreateUserUseCase {
     if (userAlreadyExist) {
       return left(new userAlreadyExistError());
     } else {
-     const hashedPassword = await this.hash.hash(password);
+     const hashedPassword = await this.hashGenerator.hash(password);
       const user = User.create({
         name,
         email,

@@ -1,4 +1,3 @@
-import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 import { makeUsers } from "../../../../../test/factory/make-users-factory";
 import { InMemoryUserRepository } from "../../../../../test/repository/in-memory-user-repository";
 import { DeleteUserUseCase } from "./delete-user-use-case";
