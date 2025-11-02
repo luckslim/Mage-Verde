@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://nestjs.com/" target="blank">
-    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" width="200" alt="Nest Logo" />
   </a>
 </p>
 
@@ -12,11 +12,10 @@
 </p>
 
 <p align="center">
-  <b>Backend desenvolvido com Clean Architecture e NestJS</b><br/>
-  <sub>Focado em desacoplamento, escalabilidade de código e organização por camadas de domínio.</sub>
+  <b>Backend desenvolvido com Clean Architecture e NodeJs</b><br/>
+  <b>Focado em desacoplamento, escalabilidade de código e organização por camadas de domínio.</b>
 </p>
 
-### End-Points:
 
 ## 🧠 Sobre o Projeto
 
@@ -32,5 +31,5 @@ Ele segue os princípios da **Clean Architecture**, garantindo independência de
 $ npm install
 
 # Rodar os testes unitários
-$ npm run start:dev
+$ npm run test
 ```
