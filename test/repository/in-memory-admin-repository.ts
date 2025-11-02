@@ -3,7 +3,7 @@ import type { Admin } from "@/domain/enterprise/entities/admin";
 
 export class InMemoryAdminRepository implements AdminRepository {
   public items: Admin[] = [];
-
+  
   async delete(id: string) {
     const indexItem = this.items.findIndex((item) => item.id.toString() !== id);
     this.items.splice(indexItem, 1);
