@@ -5,7 +5,7 @@ export class InMemoryAdminRepository implements AdminRepository {
   public items: Admin[] = [];
   
   async delete(id: string) {
-    const indexItem = this.items.findIndex((item) => item.id.toString() !== id);
+    const indexItem = this.items.findIndex((item) => item.id.toString() === id);
     this.items.splice(indexItem, 1);
   }
   async findById(id: string) {

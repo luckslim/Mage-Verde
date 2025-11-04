@@ -1,7 +1,7 @@
-import { InMemoryAdminRepository } from "../../../../../test/repository/in-memory-admin-repository";
+import { InMemoryAdminRepository } from "../../../../../../test/repository/in-memory-admin-repository";
 import { CreateAdminUseCase } from "./create-admin-use-case";
-import { FakeHasher } from "../../../../../test/cryptography/fake-hasher";
-import { makeAdmins } from "../../../../../test/factory/make-admin-factory";
+import { FakeHasher } from "../../../../../../test/cryptography/fake-hasher";
+import { makeAdmins } from "../../../../../../test/factory/make-admin-factory";
 import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 
 let inMemoryAdminRepository: InMemoryAdminRepository;

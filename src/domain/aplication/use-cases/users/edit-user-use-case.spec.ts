@@ -6,7 +6,7 @@ import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
 
 let inMemoryUserRepository: InMemoryUserRepository;
 let sut: EditUserUseCase;
-describe("Create users", () => {
+describe("edit users", () => {
   beforeEach(() => {
     inMemoryUserRepository = new InMemoryUserRepository();
     sut = new EditUserUseCase(inMemoryUserRepository);

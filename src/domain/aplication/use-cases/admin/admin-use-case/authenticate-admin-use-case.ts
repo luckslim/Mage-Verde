@@ -1,8 +1,8 @@
 import { left, right, type Either } from "@/core/either";
-import type { AdminRepository } from "../../repositories/admin-repository";
-import type { Encrypter } from "../../cryptography/encrypter";
+import type { AdminRepository } from "../../../repositories/admin-repository";
+import type { Encrypter } from "../../../cryptography/encrypter";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
-import type { HashComparer } from "../../cryptography/hash-comparer";
+import type { HashComparer } from "../../../cryptography/hash-comparer";
 import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 
 interface AuthenticateAdminUseCaseRequest {

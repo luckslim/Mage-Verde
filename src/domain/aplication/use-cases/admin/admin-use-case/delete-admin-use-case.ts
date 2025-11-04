@@ -1,6 +1,6 @@
 import { left, right, type Either } from "@/core/either";
 import { Admin } from "@/domain/enterprise/entities/admin";
-import type { AdminRepository } from "../../repositories/admin-repository";
+import type { AdminRepository } from "../../../repositories/admin-repository";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
 import type { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
 

@@ -4,12 +4,12 @@ import { DeleteUserUseCase } from "./delete-user-use-case";
 
 let inMemoryUserRepository: InMemoryUserRepository;
 let sut: DeleteUserUseCase;
-describe("Create users", () => {
+describe("delete users", () => {
   beforeEach(() => {
     inMemoryUserRepository = new InMemoryUserRepository();
     sut = new DeleteUserUseCase(inMemoryUserRepository);
   });
-  it("should be able edit users", async () => {
+  it("should be able delete user", async () => {
     for (let i = 0; i < 10; i++) {
       const user = makeUsers();
       inMemoryUserRepository.items.push(user);
@@ -22,7 +22,7 @@ describe("Create users", () => {
     });
     expect(result.isRight()).toBe(true);
   });
-  it("should not be able edit users with any email", async () => {
+  it("should not be able delete user with any email", async () => {
     for (let i = 0; i < 10; i++) {
       const user = makeUsers();
       inMemoryUserRepository.items.push(user);
