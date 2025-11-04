@@ -1,7 +1,7 @@
 import { left, right, type Either } from "@/core/either";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
 import type { EventsRepository } from "../../../repositories/event-repository";
-import { NotAllowedError } from "@/core/errors/now-allowed-error";
+import { NotAllowedError } from "@/core/errors/not-allowed-error";
 import type { Events } from "@/domain/enterprise/entities/events";
 
 interface EditEventUseCaseRequest {
