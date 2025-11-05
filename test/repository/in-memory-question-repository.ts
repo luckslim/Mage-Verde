@@ -6,9 +6,6 @@ export class InMemoryQuestionRepository implements QuestionRepository {
   async create(question: Question): Promise<void> {
     this.items.push(question);
   }
-  findByTitle(title: string): Promise<Question | null> {
-    throw new Error("Method not implemented.");
-  }
   async findById(id: string): Promise<Question | null> {
     const question = this.items.find((item) => item.id.toString() === id);
     if (!question) {

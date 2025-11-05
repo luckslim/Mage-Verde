@@ -1,8 +1,8 @@
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
-import { makeEvent } from "../../../../../../test/factory/make-events-factory";
-import { InMemoryEventsRepository } from "../../../../../../test/repository/in-memory-events-repository";
 import { EditEventUseCase } from "./edit-events-use-case";
+import { InMemoryEventsRepository } from "../../../../../test/repository/in-memory-events-repository";
+import { makeEvent } from "../../../../../test/factory/make-events-factory";
 
 let inMemoryEventRepository: InMemoryEventsRepository;
 let sut: EditEventUseCase;

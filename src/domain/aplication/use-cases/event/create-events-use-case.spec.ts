@@ -1,7 +1,7 @@
+import { FakeHasher } from "../../../../../test/cryptography/fake-hasher";
+import { makeEvent } from "../../../../../test/factory/make-events-factory";
+import { InMemoryEventsRepository } from "../../../../../test/repository/in-memory-events-repository";
 import { CreateEventsUseCase } from "./create-events-use-case";
-import { FakeHasher } from "../../../../../../test/cryptography/fake-hasher";
-import { makeEvent } from "../../../../../../test/factory/make-events-factory";
-import { InMemoryEventsRepository } from "../../../../../../test/repository/in-memory-events-repository";
 import { TitleAlreadyExistError } from "@/core/errors/title-already-exist-error";
 
 let inMemoryEventsRepository: InMemoryEventsRepository;

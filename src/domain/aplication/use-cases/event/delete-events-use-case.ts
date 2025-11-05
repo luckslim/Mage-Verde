@@ -2,7 +2,7 @@ import { left, right, type Either } from "@/core/either";
 import { Events } from "@/domain/enterprise/entities/events";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
 import type { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
-import type { EventsRepository } from "../../../repositories/event-repository";
+import type { EventsRepository } from "../../repositories/event-repository";
 
 interface DeleteEventsUseCaseRequest {
   id: string;

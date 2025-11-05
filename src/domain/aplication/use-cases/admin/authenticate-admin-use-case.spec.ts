@@ -1,8 +1,8 @@
-import { InMemoryAdminRepository } from "../../../../../../test/repository/in-memory-admin-repository";
-import { FakeHasher } from "../../../../../../test/cryptography/fake-hasher";
-import { FakeEncrypter } from "../../../../../../test/cryptography/fake-encrypter";
+import { FakeEncrypter } from "../../../../../test/cryptography/fake-encrypter";
+import { FakeHasher } from "../../../../../test/cryptography/fake-hasher";
+import { makeAdmins } from "../../../../../test/factory/make-admin-factory";
+import { InMemoryAdminRepository } from "../../../../../test/repository/in-memory-admin-repository";
 import { AuthenticateAdminUseCase } from "./authenticate-admin-use-case";
-import { makeAdmins } from "../../../../../../test/factory/make-admin-factory";
 
 let inMemoryAdminRepository: InMemoryAdminRepository;
 let fakeHasher: FakeHasher;

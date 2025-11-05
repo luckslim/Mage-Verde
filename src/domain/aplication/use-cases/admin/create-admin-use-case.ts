@@ -1,9 +1,8 @@
 import { left, right, type Either } from "@/core/either";
-import { Admin } from "@/domain/enterprise/entities/admin";
-import type { AdminRepository } from "../../../repositories/admin-repository";
 import { userAlreadyExistError } from "@/core/errors/user-already-exist-error";
-import type { FakeHasher } from "../../../../../../test/cryptography/fake-hasher";
-import type { HashGenerator } from "../../../cryptography/hash-generator";
+import { Admin } from "@/domain/enterprise/entities/admin";
+import type { AdminRepository } from "../../repositories/admin-repository";
+import type { HashGenerator } from "../../cryptography/hash-generator";
 
 interface CreateAdminUseCaseRequest {
   name: string;

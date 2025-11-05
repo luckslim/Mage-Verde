@@ -1,7 +1,7 @@
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
-import { makeEvent } from "../../../../../../test/factory/make-events-factory";
-import { InMemoryEventsRepository } from "../../../../../../test/repository/in-memory-events-repository";
 import { DeleteEventsUseCase } from "./delete-events-use-case";
+import { InMemoryEventsRepository } from "../../../../../test/repository/in-memory-events-repository";
+import { makeEvent } from "../../../../../test/factory/make-events-factory";
 
 let inMemoryEventsRepository: InMemoryEventsRepository;
 let sut: DeleteEventsUseCase;

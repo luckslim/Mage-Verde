@@ -1,5 +1,5 @@
-import { makeAdmins } from "../../../../../../test/factory/make-admin-factory";
-import { InMemoryAdminRepository } from "../../../../../../test/repository/in-memory-admin-repository";
+import { makeAdmins } from "../../../../../test/factory/make-admin-factory";
+import { InMemoryAdminRepository } from "../../../../../test/repository/in-memory-admin-repository";
 import { DeleteAdminUseCase } from "./delete-admin-use-case";
 
 let inMemoryAdminRepository: InMemoryAdminRepository;

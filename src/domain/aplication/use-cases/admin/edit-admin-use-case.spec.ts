@@ -1,8 +1,8 @@
-import { makeAdmins } from "../../../../../../test/factory/make-admin-factory";
-import { InMemoryAdminRepository } from "../../../../../../test/repository/in-memory-admin-repository";
 import { EditAdminUseCase } from "./edit-admin-use-case";
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { WrongcredentialError } from "@/core/errors/wrong-credentials-error";
+import { InMemoryAdminRepository } from "../../../../../test/repository/in-memory-admin-repository";
+import { makeAdmins } from "../../../../../test/factory/make-admin-factory";
 
 let inMemoryAdminRepository: InMemoryAdminRepository;
 let sut: EditAdminUseCase;
